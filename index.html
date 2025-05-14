@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Старий Млин - Головна</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <h1>Старий Млин</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Головна</a></li>
+                    <li><a href="#">Меню</a></li>
+                    <li><a href="#">Про нас</a></li>
+                    <li><a href="#">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головний блок -->
+    <section class="hero">
+        <div class="container">
+            <h2>Справжній смак традицій</h2>
+            <p>Зануртеся в атмосферу української кухні та гостинності.</p>
+            <a href="#" class="btn">Переглянути меню</a>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="container">
+            <h2>Дізнайтесь більше</h2>
+            <p>Ресторан «Старий Млин» розташований у мальовничій місцевості, зберігаючи дух традиційної української
+                гостинності.</p>
+            <p>Наш заклад оформлений у стилі старовинного млина, передаючи атмосферу справжньої спадщини. В кожній
+                деталі –
+                історія, що оживає для наших гостей.</p>
+            <img src="/assets/gallery-photo.jpg" alt="Інтер'єр ресторану Старий Млин">
+            <h3>Графік роботи</h3>
+            <p>Нд – Чт: 12:00 – 22:00 (замовлення до 21:00)</p>
+            <p>Пт, Сб: 12:00 – 23:00 (замовлення до 22:00)</p>
+            <h3>Замовлення столиків</h3>
+            <p>Телефон: <strong>+38 093 000 10 40</strong></p>
+            <button class="btn-booking">Забронювати столик</button>
+
+        </div>
+    </section>
+
+    <section id="menu" class="gallery">
+        <h2>Наші страви</h2>
+        <div class="gallery-container">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4norOCb8JW9jetBUokxdPywJFs1Z2JUnECan40H_r3zrPz2SiAsmSOCfTrxAqdF_hcl0jB-wOPJMkKeE25JiX29gSI0esKzKC-FinxWID1WKgGn8x3k6uwDF7ueUc-29s8IofZvF=s1284-w1088-h1284-rw"
+                alt="Страва 1">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noSUJtet5WBhC5xamWTEOWcmMrf_nIp4KOSFcX2PvoZwHyElrmTvDrwo3SzB67HvUZiXZooMYcslVW58TyCbFAZSCCYIPgheFRnhS22_GVn0ve8guRpI9K7mIW1PDJQNS19VtU=s1360-w1360-h1020-rw"
+                alt="Страва 2">
+            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nogvvl1NFwv0cKFYjXLvTxxtdAJd85CMAcpTg1fiQbp44S2Ti7VB23Zidql0uTfig0TAUuj6UeGNn8RTCu2iqTole9EwuJVMRajJQn061YoCk_TLfIzXXRQjFNKYgzI9p3T_bJBQw=s1360-w1360-h1020-rw"
+                alt="Страва 3">
+        </div>
+    </section>
+
+    <div id="bookingModal" class="hidden modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Бронювання столика</h2>
+            <form>
+                <label for="name">Ім'я:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="date">Дата:</label>
+                <input type="date" id="date" name="date" required>
+
+                <button type="submit" class="btn-booking">Надіслати заявку</button>
+            </form>
+        </div>
+    </div>
+
+
+
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-info">
+                    <h3>Контакти</h3>
+                    <p>Адреса: вул. Шевська, 6, Львів</p>
+                    <p>Телефон: <strong>+38 093 000 10 40</strong></p>
+                    <p>Email: <strong>info@staryimlyn.ua</strong></p>
+                </div>
+                <div class="footer-social">
+                    <h3>Слідкуйте за нами</h3>
+                    <div class="social-links">
+                        <a href="https://maps.app.goo.gl/8AMJqJoGBrmiYYx29" target="_blank">
+                            <img src="/assets/channels4_profile.jpg" alt="Google">
+                        </a>
+                        <a href="https://www.instagram.com/staryimlyn_brody/?hl=en" target="_blank">
+                            <img src="/assets/instagram-vector-logo-icon-social-media-logotype_901408-392.avif"
+                                alt="Instagram">
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-hours">
+                    <h3>Графік роботи</h3>
+                    <p>Нд – Чт: 12:00 – 22:00</p>
+                    <p>Пт, Сб: 12:00 – 23:00</p>
+                </div>
+            </div>
+            <p>&copy; 2025 Старий Млин. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
