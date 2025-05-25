@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
@@ -16,111 +17,289 @@
     <!-- Хедер -->
     <header class="header">
         <div class="container">
-            <h1>Старий Млин</h1>
-            <nav>
-                <ul>
-                    <li><a href="#">Головна</a></li>
-                    <li><a href="#">Меню</a></li>
-                    <li><a href="#">Про нас</a></li>
-                    <li><a href="#">Контакти</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <h1><span class="logo-icon">🌾</span> Старий Млин</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/" class="active">Головна</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#events">Події</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
         </div>
     </header>
 
     <!-- Головний блок -->
     <section class="hero">
         <div class="container">
-            <h2>Справжній смак традицій</h2>
-            <p>Зануртеся в атмосферу української кухні та гостинності.</p>
-            <a href="#" class="btn">Переглянути меню</a>
-        </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <h2>Дізнайтесь більше</h2>
-            <p>Ресторан «Старий Млин» розташований у мальовничій місцевості, зберігаючи дух традиційної української
-                гостинності.</p>
-            <p>Наш заклад оформлений у стилі старовинного млина, передаючи атмосферу справжньої спадщини. В кожній
-                деталі –
-                історія, що оживає для наших гостей.</p>
-            <img src="/assets/gallery-photo.jpg" alt="Інтер'єр ресторану Старий Млин">
-            <h3>Графік роботи</h3>
-            <p>Нд – Чт: 12:00 – 22:00 (замовлення до 21:00)</p>
-            <p>Пт, Сб: 12:00 – 23:00 (замовлення до 22:00)</p>
-            <h3>Замовлення столиків</h3>
-            <p>Телефон: <strong>+38 093 000 10 40</strong></p>
-            <button class="btn-booking">Забронювати столик</button>
-
-        </div>
-    </section>
-
-    <section id="menu" class="gallery">
-        <h2>Наші страви</h2>
-        <div class="gallery-container">
-            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4norOCb8JW9jetBUokxdPywJFs1Z2JUnECan40H_r3zrPz2SiAsmSOCfTrxAqdF_hcl0jB-wOPJMkKeE25JiX29gSI0esKzKC-FinxWID1WKgGn8x3k6uwDF7ueUc-29s8IofZvF=s1284-w1088-h1284-rw"
-                alt="Страва 1">
-            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4noSUJtet5WBhC5xamWTEOWcmMrf_nIp4KOSFcX2PvoZwHyElrmTvDrwo3SzB67HvUZiXZooMYcslVW58TyCbFAZSCCYIPgheFRnhS22_GVn0ve8guRpI9K7mIW1PDJQNS19VtU=s1360-w1360-h1020-rw"
-                alt="Страва 2">
-            <img src="https://lh3.googleusercontent.com/gps-cs-s/AC9h4nogvvl1NFwv0cKFYjXLvTxxtdAJd85CMAcpTg1fiQbp44S2Ti7VB23Zidql0uTfig0TAUuj6UeGNn8RTCu2iqTole9EwuJVMRajJQn061YoCk_TLfIzXXRQjFNKYgzI9p3T_bJBQw=s1360-w1360-h1020-rw"
-                alt="Страва 3">
-        </div>
-    </section>
-
-    <div id="bookingModal" class="hidden modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Бронювання столика</h2>
-            <form>
-                <label for="name">Ім'я:</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="phone">Телефон:</label>
-                <input type="tel" id="phone" name="phone" required>
-
-                <label for="date">Дата:</label>
-                <input type="date" id="date" name="date" required>
-
-                <button type="submit" class="btn-booking">Надіслати заявку</button>
-            </form>
-        </div>
-    </div>
-
-
-
-
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-columns">
-                <div class="footer-info">
-                    <h3>Контакти</h3>
-                    <p>Адреса: вул. Шевська, 6, Львів</p>
-                    <p>Телефон: <strong>+38 093 000 10 40</strong></p>
-                    <p>Email: <strong>info@staryimlyn.ua</strong></p>
-                </div>
-                <div class="footer-social">
-                    <h3>Слідкуйте за нами</h3>
-                    <div class="social-links">
-                        <a href="https://maps.app.goo.gl/8AMJqJoGBrmiYYx29" target="_blank">
-                            <img src="/assets/channels4_profile.jpg" alt="Google">
-                        </a>
-                        <a href="https://www.instagram.com/staryimlyn_brody/?hl=en" target="_blank">
-                            <img src="/assets/instagram-vector-logo-icon-social-media-logotype_901408-392.avif"
-                                alt="Instagram">
-                        </a>
-                    </div>
-                </div>
-                <div class="footer-hours">
-                    <h3>Графік роботи</h3>
-                    <p>Нд – Чт: 12:00 – 22:00</p>
-                    <p>Пт, Сб: 12:00 – 23:00</p>
+            <div class="hero-content">
+                <h2>Справжній смак українських традицій</h2>
+                <p>Відчуйте теплоту рідного дому в кожній страві</p>
+                <div class="hero-buttons">
+                    <a href="menu.html" class="btn btn-primary">Наше меню</a>
+                    <a href="#booking" class="btn btn-secondary">Забронювати столик</a>
                 </div>
             </div>
-            <p>&copy; 2025 Старий Млин. Всі права захищені.</p>
+        </div>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Наша історія</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Ресторан «Старий Млин» - це не просто заклад, а справжній куточок української душі. Наша історія
+                        почалася у 2010 році, коли ми вирішили відродити традиції української кухні у сучасному
+                        виконанні.</p>
+                    <p>Ми готуємо з любов'ю, використовуючи тільки свіжі, місцеві продукти. Наші страви - це смак
+                        дитинства, який ми хочемо подарувати кожному гостю.</p>
+                    <div class="signature">
+                        <img src="/assets/signature.png" alt="Підпис власника">
+                        <p>Іван Петренко, засновник</p>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="/assets/IMG_20211024_132319.jpg" alt="Інтер'єр ресторану">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Спеціальні пропозиції -->
+    <section class="specials">
+        <div class="container">
+            <h2 class="section-title">Спеціальні пропозиції</h2>
+            <div class="specials-grid">
+                <div class="special-item">
+                    <div class="special-badge">Акція</div>
+                    <h3>Сімейний обід</h3>
+                    <p>4 страви + напої за 450 грн</p>
+                    <a href="#" class="btn btn-small">Детальніше</a>
+                </div>
+                <div class="special-item">
+                    <div class="special-badge">Новинка</div>
+                    <h3>Дегустаційне меню</h3>
+                    <p>5 авторських страв від шефа</p>
+                    <a href="#" class="btn btn-small">Детальніше</a>
+                </div>
+                <div class="special-item">
+                    <div class="special-badge">Вигідно</div>
+                    <h3>Бізнес-ланч</h3>
+                    <p>Щодня з 12:00 до 16:00</p>
+                    <a href="#" class="btn btn-small">Детальніше</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <!-- Галерея -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Наші страви</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="/assets/borg.jpg" alt="Борщ український">
+                    <div class="gallery-overlay">
+                        <h3>Борщ український</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/vareniki-z-vishneyu-01.jpg" alt="Вареники">
+                    <div class="gallery-overlay">
+                        <h3>Вареники з вишнею</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/golubtsi.jpg" alt="Голубці">
+                    <div class="gallery-overlay">
+                        <h3>Голубці з грибами</h3>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="/assets/salo.jpg" alt="Сало">
+                    <div class="gallery-overlay">
+                        <h3>Сало з часником</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="full-menu-btn-container">
+                <a href="menu.html" class="btn btn-primary">Повне меню</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Події -->
+    <section id="events" class="events">
+        <div class="container">
+            <h2 class="section-title">Найближчі події</h2>
+            <div class="events-grid">
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">15</span>
+                        <span class="month">Чер</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Вечір української музики</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 19:00 - 22:00</p>
+                        <p>Жива музика, традиційні страви та атмосфера затишку</p>
+                        <a href="#" class="btn btn-small">Зареєструватись</a>
+                    </div>
+                </div>
+                <div class="event-card">
+                    <div class="event-date">
+                        <span class="day">22</span>
+                        <span class="month">Чер</span>
+                    </div>
+                    <div class="event-info">
+                        <h3>Мастер-клас з ліпки вареників</h3>
+                        <p class="event-time"><i class="far fa-clock"></i> 12:00 - 14:00</p>
+                        <p>Навчимося ліпити ідеальні вареники разом із нашим шеф-кухарем</p>
+                        <a href="#" class="btn btn-small">Зареєструватись</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Відгуки -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Відгуки наших гостей</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>"Найкращий борщ, який я коли-небудь куштувала! Атмосфера дуже затишна, обслуговування на
+                            високому рівні. Обов'язково повернемось!"</p>
+                        <div class="author">
+                            <img src="/assets/user1.jpg" alt="Ольга">
+                            <span>Ольга, Київ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p>"Відмінне місце для сімейного обіду. Діти були в захваті від дерунів, а ми - від домашнього
+                            узвару. Рекомендую всім!"</p>
+                        <div class="author">
+                            <img src="/assets/user2.jpg" alt="Андрій">
+                            <span>Андрій, Львів</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Бронювання -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="booking-content">
+                <div class="booking-text">
+                    <h2>Забронюйте столик</h2>
+                    <p>Гарантуйте собі місце в нашому затишному ресторані. Заповніть форму або зателефонуйте нам:</p>
+                    <p class="phone"><i class="fas fa-phone"></i> +38 050 294 73 44</p>
+                    <div class="working-hours">
+                        <h3>Години роботи:</h3>
+                        <p>Нд - Чт: 12:00 - 22:00</p>
+                        <p>Пт - Сб: 12:00 - 23:00</p>
+                    </div>
+                </div>
+                <div class="booking-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Ваше ім'я" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Телефон" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Дата" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" placeholder="Час" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Кількість гостей" min="1" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Забронювати</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Старий Млин</h3>
+                    <p>Ресторан української кухні, де кожен відчуває себе як вдома.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/starij.mlin.brodi/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/staryimlyn_brody/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Навігація</h3>
+                    <ul>
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#events">Події</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> вул. Шептицького, 2, Броди</p>
+                    <p><i class="fas fa-phone"></i> +38 050 294 73 44</p>
+                    <p><i class="fas fa-envelope"></i> info@staryimlyn.ua</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Розсилка</h3>
+                    <p>Підпишіться на наші новини та спеціальні пропозиції</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Старий Млин. Всі права захищені.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- Кнопка "Наверх" -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
     <script src="/js/script.js"></script>
 </body>

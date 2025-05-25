@@ -1,65 +1,111 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // Анімована зміна кольору кнопки при наведенні
-    const menuButton = document.querySelector(".btn");
-    menuButton.addEventListener("mouseenter", function () {
-        this.style.backgroundColor = "#4a3f35";
-    });
-    menuButton.addEventListener("mouseleave", function () {
-        this.style.backgroundColor = "#6d4b29";
-    });
-
-    // Плавне прокручування до секцій при кліку на меню
-    document.querySelectorAll("nav ul li a").forEach(link => {
-        link.addEventListener("click", function (e) {
+    // Плавне прокручування для всіх посилань
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
+
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+
+            const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 50,
-                    behavior: "smooth"
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
                 });
+
+                // Закрити мобільне меню, якщо воно відкрите
+                if (mobileMenu.classList.contains('active')) {
+                    toggleMobileMenu();
+                }
             }
         });
     });
 
-    // Оновлення року у футері автоматично
-    const footerText = document.querySelector(".footer p:last-child");
-    const currentYear = new Date().getFullYear();
-    footerText.innerHTML = `&copy; ${currentYear} Старий Млин. Всі права захищені.`;
-});
+    // Фіксація хедера при скролі
+    const header = document.querySelector('.header');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
 
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("bookingModal");
-    const btn = document.querySelector(".btn-booking");
-    const closeBtn = document.querySelector(".close");
+    // Кнопка "Наверх"
+    const backToTopButton = document.querySelector('.back-to-top');
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 300) {
+            backToTopButton.classList.add('visible');
+        } else {
+            backToTopButton.classList.remove('visible');
+        }
+    });
 
-    if (btn && modal && closeBtn) {
-        btn.addEventListener("click", function () {
-            modal.style.display = "flex";
-        });
+    // Мобільне меню
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenu = document.querySelector('nav ul');
 
-        closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-        });
+    function toggleMobileMenu() {
+        mobileMenu.classList.toggle('active');
+        mobileMenuBtn.querySelector('i').classList.toggle('fa-times');
+        mobileMenuBtn.querySelector('i').classList.toggle('fa-bars');
+    }
 
-        window.addEventListener("click", function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
+    mobileMenuBtn.addEventListener('click', toggleMobileMenu);
+
+    // Закрити мобільне меню при кліку на пункт
+    document.querySelectorAll('nav ul li a').forEach(item => {
+        item.addEventListener('click', function () {
+            if (mobileMenu.classList.contains('active')) {
+                toggleMobileMenu();
             }
         });
-    } else {
-        console.error("Елементи для модального вікна не знайдено.");
+    });
+
+    // Форма бронювання
+    const bookingForm = document.querySelector('.booking-form form');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Тут можна додати логіку відправки форми
+            alert('Дякуємо за ваше замовлення! Ми зв\'яжемося з вами для підтвердження.');
+            this.reset();
+        });
     }
-});
 
-document.addEventListener("DOMContentLoaded", function () {
-    const quotes = [
-        "Справжня гостинність — це мистецтво дарувати тепло серця.",
-        "Українська кухня — це традиції, які оживають у кожному смаку.",
-        "Немає нічого кращого, ніж аромат щойно спеченого хліба та сімейна вечеря."
-    ];
+    // Форма розсилки
+    const newsletterForm = document.querySelector('.newsletter-form');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function (e) {
+            e.preventDefault();
 
-    const quoteElement = document.getElementById("quote");
-    quoteElement.innerText = quotes[Math.floor(Math.random() * quotes.length)];
+            // Тут можна додати логіку відправки форми
+            alert('Дякуємо за підписку!');
+            this.reset();
+        });
+    }
+
+    // Ініціалізація слайдера відгуків
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial');
+
+    function showTestimonial(index) {
+        testimonials.forEach((testimonial, i) => {
+            testimonial.style.transform = `translateX(${100 * (i - index)}%)`;
+        });
+    }
+
+    // Автоматична зміна відгуків
+    setInterval(() => {
+        currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+        showTestimonial(currentTestimonial);
+    }, 5000);
+
+    // Ініціалізація
+    showTestimonial(0);
+    if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+    }
 });

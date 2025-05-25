@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню – Старий Млин</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Serif:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1><span class="logo-icon">🌾</span> Старий Млин</h1>
+                <nav>
+                    <ul>
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="menu.html" class="active">Меню</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Головний блок -->
+    <section class="menu-hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Наше меню</h2>
+                <p>Смак традиційної української кухні у кожній страві</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Меню -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-categories">
+                <button class="category-btn active" data-category="all">Усе меню</button>
+                <button class="category-btn" data-category="starters">Закуски</button>
+                <button class="category-btn" data-category="soups">Перші страви</button>
+                <button class="category-btn" data-category="mains">Основні страви</button>
+                <button class="category-btn" data-category="desserts">Десерти</button>
+                <button class="category-btn" data-category="drinks">Напої</button>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Закуски -->
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-item-content">
+                        <img src="/assets/salo.jpg" alt="Сало">
+                        <div class="item-info">
+                            <h3>Сало з чорним хлібом</h3>
+                            <p>Тонко нарізане сало з часником та чорним хлібом з домашньої печі</p>
+                            <span class="price">90 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="starters">
+                    <div class="menu-item-content">
+                        <img src="/assets/deruni.png" alt="Деруни">
+                        <div class="item-info">
+                            <h3>Деруни зі сметаною</h3>
+                            <p>Золотисті картопляні деруни з домашньою сметаною та зеленню</p>
+                            <span class="price">130 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Перші страви -->
+                <div class="menu-item" data-category="soups">
+                    <div class="menu-item-content">
+                        <img src="/assets/borg.jpg" alt="Борщ">
+                        <div class="item-info">
+                            <h3>Борщ український</h3>
+                            <p>Справжній домашній борщ з пампушками, салом та часником</p>
+                            <span class="price">150 грн</span>
+                            <span class="special-badge">Хіт</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="soups">
+                    <div class="menu-item-content">
+                        <img src="/assets/kapysnyak.jpg" alt="Капусняк">
+                        <div class="item-info">
+                            <h3>Капусняк</h3>
+                            <p>Наваристий суп з квашеною капустою та м'ясом</p>
+                            <span class="price">140 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Основні страви -->
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-content">
+                        <img src="/assets/vereniki.webp" alt="Вареники">
+                        <div class="item-info">
+                            <h3>Вареники з картоплею</h3>
+                            <p>Ніжні вареники з картоплею, цибулею та шкварками</p>
+                            <span class="price">120 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-content">
+                        <img src="/assets/golubtsi.jpg" alt="Голубці">
+                        <div class="item-info">
+                            <h3>Голубці з м'ясом</h3>
+                            <p>Класичні голубці зі свининою, рисом та ароматним соусом</p>
+                            <span class="price">180 грн</span>
+                            <span class="special-badge">Популярне</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="mains">
+                    <div class="menu-item-content">
+                        <img src="/assets/vareniki-z-vishneyu-01.jpg" alt="Вареники з вишнею">
+                        <div class="item-info">
+                            <h3>Вареники з вишнею</h3>
+                            <p>Солодкі вареники з вишнею та сметаною</p>
+                            <span class="price">110 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Десерти -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="menu-item-content">
+                        <img src="/assets/IMG_6123.jpeg" alt="Сирник">
+                        <div class="item-info">
+                            <h3>Сирник</h3>
+                            <p>Домашній сирник з родзинками та варенням</p>
+                            <span class="price">95 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Напої -->
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-content">
+                        <img src="/assets/uzvar.jpg" alt="Узвар">
+                        <div class="item-info">
+                            <h3>Узвар</h3>
+                            <p>Охолоджений напій із сушених фруктів</p>
+                            <span class="price">50 грн</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="drinks">
+                    <div class="menu-item-content">
+                        <img src="/assets/kvas.jpg" alt="Квас">
+                        <div class="item-info">
+                            <h3>Домашній квас</h3>
+                            <p>Освіжаючий хлібний квас власного приготування</p>
+                            <span class="price">45 грн</span>
+                            <span class="special-badge">Сезонне</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="full-menu-btn-container">
+                <a href="/assets/full-menu.pdf" class="btn btn-primary" download>
+                    <i class="fas fa-download"></i> Завантажити повне меню (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Сезонні пропозиції -->
+    <section class="seasonal-offers">
+        <div class="container">
+            <h2 class="section-title">Сезонні пропозиції</h2>
+            <div class="offers-grid">
+                <div class="offer-card">
+                    <img src="/assets/spring-menu-2021.jpg" alt="Весняне меню">
+                    <div class="offer-content">
+                        <h3>Весняне меню</h3>
+                        <p>Свіжі весняні страви з першою зеленню та овочами</p>
+                        <a href="#" class="btn btn-small">Детальніше</a>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="/assets/napoi.webp" alt="Літній напій">
+                    <div class="offer-content">
+                        <h3>Охолоджувальні напої</h3>
+                        <p>Освіжаючі літні напої та морозиво</p>
+                        <a href="#" class="btn btn-small">Детальніше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="contacts" class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>Старий Млин</h3>
+                    <p>Ресторан української кухні, де кожен відчуває себе як вдома.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/starij.mlin.brodi/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/staryimlyn_brody/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Навігація</h3>
+                    <ul>
+                        <li><a href="/">Головна</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="#about">Про нас</a></li>
+                        <li><a href="#events">Події</a></li>
+                        <li><a href="#contacts">Контакти</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Контакти</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> вул. Шептицького, 2, Броди</p>
+                    <p><i class="fas fa-phone"></i> +38 050 294 73 44</p>
+                    <p><i class="fas fa-envelope"></i> info@staryimlyn.ua</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Розсилка</h3>
+                    <p>Підпишіться на наші новини та спеціальні пропозиції</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Ваш email" required>
+                        <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Старий Млин. Всі права захищені.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-apple-pay"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/js/script.js"></script>
+    <script>
+        // Фільтрація меню за категоріями
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                // Видаляємо активний клас у всіх кнопок
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                // Додаємо активний клас до поточної кнопки
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+                const menuItems = document.querySelectorAll('.menu-item');
+
+                menuItems.forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
